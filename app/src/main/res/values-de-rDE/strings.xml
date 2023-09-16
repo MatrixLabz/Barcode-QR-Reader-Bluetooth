@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">QR &amp; Barcode Scannerr</string>
+    <string name="scanner">Scanner</string>
+    <string name="send_to_device">An Gerät Senden</string>
+    <string name="scan_code_to_start">Scanne einen beliebigen QR Code / Barcode\num zu beginnen.</string>
+    <string name="settings">Einstellungen</string>
+    <string name="connection">Verbindung</string>
+    <string name="auto_connect">Automatisch Verbinden</string>
+    <string name="auto_connect_desc">Mit dem letzten Gerät beim Start verbinden</string>
+    <string name="show_unnamed">Unbenannte Geräte</string>
+    <string name="show_unnamed_desc">Zeigt Geräte ohne Namen an</string>
+    <string name="appearance">Darstellung</string>
+    <string name="theme">Design</string>
+    <string name="theme_desc">Änderert das App-Design</string>
+    <string name="dynamic_theme">Dynamisches Design</string>
+    <string name="dynamic_theme_desc">Benutzt das dynamische Design</string>
+    <string name="front_camera">Vorderkamera</string>
+    <string name="front_camera_desc">Benutzt die Frontkamera anstatt der Rückkamera falls es vom Gerät unterstützt wird</string>
+    <string name="restrict_area">Scanbereichs einschränken</string>
+    <string name="restrict_area_desc">Zeigt ein Overlay im Scanner an</string>
+    <string name="overlay_type">Overlay-Typ</string>
+    <string name="overlay_type_desc">Einstellen der Form des Overlays</string>
+    <string name="full_inside">Komplett enthalten</string>
+    <string name="full_inside_desc">Codes müssen komplett im Bereich enthalten sein</string>
+    <string name="scan_freq">Scan Geschwindigkeit</string>
+    <string name="scan_freq_desc">Intervall in dem das Bild analysiert wird. Höhere Frequenzen führen zu einer größeren CPU Nutzung.</string>
+    <string name="scan_res">Scan Auflösung</string>
+    <string name="auto_send">Automatisch Senden</string>
+    <string name="auto_send_desc">Senden von neuen Codes senden</string>
+    <string name="extra_keys">Extra Tasten</string>
+    <string name="extra_keys_desc">Tasten die jedem Text, der an den PC gesendet wird, angehängt werden sollen</string>
+    <string name="play_sound">Scan Ton</string>
+    <string name="play_sound_desc">Spielt einen Ton beim scannen eines Codes ab.</string>
+    <string name="raw_value">Rohwert</string>
+    <string name="raw_value_desc">Verwendet den Rohwert des Codes</string>
+    <string name="about">Über</string>
+    <string name="confirm">Bestätigen</string>
+    <string name="dismiss">Abbrechen</string>
+    <string name="scanned_devices">Gescannte Geräte</string>
+    <string name="swipe_refresh">(Von oben ziehen zum Aktualisieren)</string>
+    <string name="paired_devices">Gekoppelte Geräte</string>
+    <string name="no_paired_devices">(Keine gekoppelten Geräte gefunden)</string>
+    <string name="skip">Überspringen</string>
+    <string name="request_again">Erneut anfragen</string>
+    <string name="exit">Beenden</string>
+    <string name="send_delay">Sendeverzögerung</string>
+    <string name="send_delay_desc">Zeit zwischen jedem gesendeten Buchstaben</string>
+    <string name="send_delay_template">Verzögerung (ms): %.0f</string>
+    <string name="request_permission">Berechtigung anfragen</string>
+    <string name="bluetooth_permission">Diese App benötigt Bluetooth-Berechtigungen, um mit anderen Geräten zu kommunizieren. Bitte erlauben Sie der App den Zugriff auf \'Nearby Devices\'.</string>
+    <string name="camera_permission">Kamera Berechtigung wird zum Anzeigen der Vorschau und zum Scannen von Codes benötigt. Bitte erlauben sie der App den Zugriff auf \'Kamera\'.</string>
+    <string name="location_permission">Standort Berechtigung wird zum Scannen nach neuen Geräten benötigt.</string>
+    <string name="location_enable">Standort muss auf dem Gerät aktiviert sein.</string>
+    <string name="open_location_settings">Standort Einstellungen öffnen</string>
+    <string name="connecting">Verbinde…</string>
+    <string name="connect_help">Falls keine Verbindung möglich sein sollte, muss das Gerät zunächst auf beiden Seiten entfernt werden und dann erneut von der App aus verbunden werden.</string>
+    <string name="haptic_feedback">Haptisches Feedback</string>
+    <string name="haptic_feedback_desc">Vibriert wenn ein neuer Code gescannt wird</string>
+    <string name="connected_with">Verbunden mit: %s</string>
+    <string name="info">Info</string>
+    <string name="name">Name</string>
+    <string name="mac_address">MAC-Adresse</string>
+    <string name="alias">Alias</string>
+    <string name="type">Typ</string>
+    <string name="clazz">Klasse</string>
+    <string name="services">Service</string>
+    <string name="uuids">UUIDs</string>
+    <string name="code_types">Code Typen</string>
+    <string name="code_types_desc">Aktiviere nur benötigte Typen um die Scan-Geschwindigkeit zu verbessern. Wähle keinen um alle zu aktivieren.</string>
+    <string name="bt_proxy_error">Fehler in BT-Proxy! Versuche die App neuzustarten…</string>
+    <string name="bt_service_disconnected">BT-Service entfernt!</string>
+    <string name="bt_service_connected">BT-Service verbunden!</string>
+    <string name="please_wait">Bitte warten!</string>
+    <string name="copied_to_clipboard">In Zwischenablage kopiert!</string>
+    <string name="devices">Geräte</string>
+    <string name="keyboard_layout">Tastatur Layout</string>
+    <string name="keyboard_layout_desc">Stellt das verwentete Tastatus Layout ein. Ändern, falls Sie Sonderzeichen eingeben möchten oder kein QWERTY-Layout verwenden.</string>
+    <string name="disconnect">Trennen</string>
+    <string name="more">Mehr</string>
+    <string name="toggle_flash">Blitz an/aus</string>
+    <string name="loading">Loading…</string>
+    <string name="error">Error</string>
+    <string name="failed_to_download">Der Download und die Installation des ML-Kit Barcode-Moduls sind fehlgeschlagen.</string>
+    <string name="ensure_internet_and_play">Stellen Sie sicher, dass Sie eine aktive Internetverbindung haben und dass die Google Play Services auf Ihrem Gerät installiert sind.</string>
+    <string name="download_bundled">Alternativ können Sie die bundled APK-Version von der GitHub-Seite herunterladen welche das Modul bereits enthält.</string>
+    <string name="downloading_module">Anforderung des Downloads und Installation des ML-Kit Barcode-Moduls über Google Play.\n\nDies muss nur einmal durchgeführt werden. Normalerweise, wenn Sie die App als APK installieren oder die Daten der Google Play Services löschen.</string>
+    <string name="unpair_device">Entkoppeln von %s?</string>
+    <string name="unpair_desc">Durch das Entkoppeln wird das Gerät aus der Liste der gekoppelten Geräte entfernt.</string>
+    <string name="connect">Verbinden</string>
+    <string name="unpair">Entkoppeln</string>
+    <string name="error_code" formatted="false">Fehler: %s (%s)</string>
+    <string name="downloading">Herunterladen…</string>
+    <string name="installing">Installieren…</string>
+    <string name="reset_default">Auf Standard zurücksetzen?</string>
+    <string name="reset_default_desc">Sind Sie sicher, dass Sie auf die Standardeinstellungen zurücksetzen wollen?</string>
+    <string name="ok">OK</string>
+    <string name="reset">Zurücksetzen</string>
+    <string name="back">Zurück</string>
+    <string name="source_code">Source Code</string>
+    <string name="source_code_desc">Den Source Code auf GitHub ansehen</string>
+    <string name="report_issue">Fehler melden</string>
+    <string name="report_issue_desc">Melde ein Probleme auf GitHub</string>
+    <string name="rate">Bewerten auf Google Play</string>
+    <string name="rate_desc">Wenn Ihnen die App gefällt, bewerte sie bitte auf Google Play</string>
+    <string name="share">Teilen</string>
+    <string name="share_desc">Teile die App mit Freunden</string>
+    <string name="share_via">Teilen mit</string>
+    <string-array name="theme_values">
+        <item>System</item>
+        <item>Hell</item>
+        <item>Dunkel</item>
+    </string-array>
+    <string-array name="overlay_values">
+        <item>Quadratisch (QR-Code)</item>
+        <item>Rechteckig (Barcode)</item>
+    </string-array>
+    <string-array name="scan_freq_values">
+        <item>Am Schnellsten</item>
+        <item>Schnell (100ms)</item>
+        <item>Normal (500ms)</item>
+        <item>Langsam (1s)</item>
+    </string-array>
+    <string-array name="scan_res_values">
+        <item>SD (480P)</item>
+        <item>HD (720P)</item>
+        <item>FHD (1080P)</item>
+    </string-array>
+    <string-array name="extra_keys_values">
+        <item>Keine</item>
+        <item>Enter</item>
+        <item>Tab</item>
+        <item>Leerzeichen</item>
+        <item>Benutzerdefiniert</item>
+    </string-array>
+    <string-array name="code_types_values">
+        <item>CODE_128</item>
+        <item>CODE_39</item>
+        <item>CODE_93</item>
+        <item>CODABAR</item>
+        <item>DATA_MATRIX</item>
+        <item>EAN_13</item>
+        <item>EAN_8</item>
+        <item>ITF</item>
+        <item>QR_CODE</item>
+        <item>UPC_A</item>
+        <item>UPC_E</item>
+        <item>PDF417</item>
+        <item>AZTEC</item>
+    </string-array>
+    <string-array name="keyboard_layout_values">
+        <item>Englisch (US)</item>
+        <item>Deutsch (DE)</item>
+        <item>Französisch (FR)</item>
+        <item>Englisch (GB)</item>
+        <item>Spanisch (ES)</item>
+        <item>Italienisch (IT)</item>
+    </string-array>
+    <string-array name="highlight_values">
+        <item>Box</item>
+        <item>Punkte</item>
+    </string-array>
+    <string name="scan_res_desc">Auflösung des analysierten Bilds. Höhere Auflösungen dauern länger zum Analysieren.</string>
+    <string name="refresh">Aktualisieren</string>
+    <string name="bluetooth_disabled">Bluetooth ist deaktiviert</string>
+    <string name="enable_bluetooth">Bitte aktivieren Sie Bluetooth in den Systemeinstellungen oder indem Sie auf die Schaltfläche unten klicken.</string>
+    <string name="enable_bluetooth_btn">Bluetooth aktivieren</string>
+    <string name="cancel">Abbrechen</string>
+    <string name="no_device">Kein Gerät verbunden</string>
+    <string name="code_types_desc_short">Aktivieren Sie nur bestimmte Typen, um die Scangeschwindigkeit zu erhöhen</string>
+    <string name="highlight_type">Hervorhebungs Typ</string>
+    <string name="highlight_type_desc">Wähle aus wie erkannte Codes hervorgehoben werden</string>
+    <string name="auto_focus">Autofokus</string>
+    <string name="auto_focus_desc">Deaktivieren, falls Sie nur manuell fokussieren möchten</string>
+    <string name="bt_hid_service">Bluetooth HID Service</string>
+    <string name="service_running">Service läuft gerade</string>
+    <string name="refresh_proxy">Proxy erneuern</string>
+    <string name="bt_proxy_registered">BT-Proxy registriert!</string>
+    <string name="stop_proxy">Proxy beenden</string>
+    <string name="proxy_waiting">Warten bis der BT-Proxy verbunden ist…</string>
+    <string name="exit_confirm">Zum Beenden erneut zurück drücken</string>
+    <string name="allow_screen_rotation">Bildschirmdrehung freischalten</string>
+    <string name="allow_screen_rotation_desc">Erlaubt die automatische Drehung des Bildschirms</string>
+    <string name="fix_exposure">Feste Auslösezeit</string>
+    <string name="fix_exposure_desc">Hilft dabei Bewegungsunschärfe im Bild zu reduzieren</string>
+    <string name="filter_regex">Filter regex</string>
+    <string name="filter_regex_desc">Erlaubt es codes mit einem regulären Ausdruck zu filtern</string>
+    <string name="filter_desc_long">Unterstützt normale regex Syntax. Benutze eine leere Zeichenkette oder .* um alles zu erfassen.</string>
+    <string name="custom_template">Eigenes Template</string>
+    <string name="custom_templ_desc">Erlaubt ein eigenes Template festzulegen</string>
+    <string name="custom_templ_desc_long">Stellen Sie sicher, dass \'Extra Tasten\' auf \'Benutzerdefiniert\' eingestellt ist. Spezielle Platzhalter: {CODE}, {F1–12}, {ENTER}, {ESC}, {TAB}, {BKSP}, {DATE}, {TIME}, {LEFT}, {RIGHT}, {UP}, {DOWN}</string>
+    <string name="camera">Kamera</string>
+    <string name="focus_mode">Fokus Modus</string>
+    <string name="focus_mode_desc">Wählen des bevorzugtes Fokusverhaltens. In einigen Modi ist die manuelle Fokussierung durch Tippen nicht möglich.</string>
+    <string-array name="focus_mode_values">
+        <item>Auto</item>
+        <item>Manuell</item>
+        <item>Macro</item>
+        <item>Kontinuierlich</item>
+        <item>EDOF</item>
+        <item>Fest (Unendlich)</item>
+    </string-array>
+    <string name="search_by_value">Suchen nach Wert</string>
+    <string name="history">Verlauf</string>
+    <string name="search">Suchen</string>
+    <string name="clear_history">Verlauf löschen</string>
+    <string name="clear_history_desc">Bist du sicher, dass du den Verlauf löschen willst?</string>
+    <string name="preview_mode_desc">Kann Strom und Verzögerungen verringern</string>
+    <string name="preview_performance_mode">Leistunsmodus für Vorschau</string>
+    <string name="full_screen_scanner_desc">Scanner wird im Vollbild angezeigt</string>
+    <string name="full_screen_scanner">Scanner im Vollbild</string>
+</resources>
