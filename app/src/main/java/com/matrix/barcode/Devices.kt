@@ -128,7 +128,7 @@ fun LottieScanButton(onClick: () -> Unit) {
             text = "Scan Any QR and Barcode",
             modifier = Modifier.padding(top = 8.dp), // Add padding to control the spacing between the animation and text
             style = MaterialTheme.typography.bodyMedium,
-            color = Color(0xFF008000)
+            color = MaterialTheme.colorScheme.primary
         )
     }
 }
@@ -249,7 +249,7 @@ fun DevicesViewModel.DeviceList(
             item {
                 Text(
                     stringResource(R.string.scanned_devices),
-                    color = Color(0xFF008000),
+                    color = MaterialTheme.colorScheme.primary,
                     style = MaterialTheme.typography.titleSmall
                 )
             }
@@ -287,7 +287,7 @@ fun DevicesViewModel.DeviceList(
                 Spacer(Modifier.height(8.dp))
                 Text(
                     stringResource(R.string.paired_devices),
-                    color = Color(0xFF008000),
+                    color = MaterialTheme.colorScheme.primary,
                     style = MaterialTheme.typography.titleSmall
                 )
             }
@@ -438,7 +438,7 @@ fun BluetoothDisabledCard() {
                     .fillMaxWidth()
                     .height(48.dp),
                 shape = RoundedCornerShape(24.dp),
-                colors = ButtonDefaults.buttonColors(Color(0xFF008000)),
+                colors = ButtonDefaults.buttonColors(MaterialTheme.colorScheme.primary),
                 contentPadding = PaddingValues(16.dp)
             ) {
                 Text(
