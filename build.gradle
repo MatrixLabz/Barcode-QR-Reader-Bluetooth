@@ -13,7 +13,7 @@ buildscript {
         camerax_version = '1.3.0-rc01'
         accomp_version = '0.32.0'
         play_version = '18.3.0'
-        agp_version = '8.1.0'
+        agp_version = '8.1.1'
         lottie_version = '6.1.0'
     }
 }
