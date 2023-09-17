@@ -89,6 +89,7 @@ dependencies {
     standardImplementation "com.google.android.gms:play-services-base:18.2.0"
 
     implementation "com.google.accompanist:accompanist-permissions:$accomp_version"
+    implementation "com.airbnb.android:lottie-compose:$lottie_version"
 
     testImplementation 'junit:junit:4.13.2'
     testImplementation 'org.mockito:mockito-core:5.4.0'

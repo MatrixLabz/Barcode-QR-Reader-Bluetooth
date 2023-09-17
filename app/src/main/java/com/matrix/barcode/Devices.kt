@@ -7,6 +7,7 @@ import android.bluetooth.BluetoothProfile
 import android.content.Intent
 import android.os.Build
 import android.util.Log
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -26,9 +27,9 @@ import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
+import com.airbnb.lottie.compose.*
 import com.matrix.barcode.bt.removeBond
 import com.matrix.barcode.ui.*
 import com.matrix.barcode.ui.model.DevicesViewModel
@@ -55,14 +56,8 @@ fun Devices() = with(viewModel<DevicesViewModel>()) {
         modifier = Modifier.nestedScroll(scrollBehavior.nestedScrollConnection),
         topBar = {
             TopAppBar(
-                title = { Text(stringResource(R.string.devices)) },
+                title = { Text(stringResource(R.string.home)) },
                 actions = {
-                    IconButton(
-                        onClick = { navigation.navigate(Routes.Main) },
-                        modifier = Modifier.tooltip(stringResource(R.string.scan))
-                    ) {
-                        Icon(Icons.Default.QrCodeScanner, "Scan")
-                    }
                     IconButton(
                         onClick = {
                             if (!isScanning) refresh(controller)
@@ -84,10 +79,60 @@ fun Devices() = with(viewModel<DevicesViewModel>()) {
             )
         }) { padding ->
         Box(Modifier.padding(padding)) {
-            DeviceContent()
+            Column(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(top = 16.dp),
+            ) {
+                LottieScanButton(onClick = {
+                    // Handle the scan button click action here
+                    navigation.navigate(Routes.Main)
+                })
+                DeviceContent()
+            }
         }
+
     }
 }
+
+@Composable
+fun LottieScanButton(onClick: () -> Unit) {
+    val composition by rememberLottieComposition(
+        spec = LottieCompositionSpec.RawRes(R.raw.animation_scanner)
+    )
+
+    val progress by animateLottieCompositionAsState(
+        composition,
+        iterations = LottieConstants.IterateForever
+    )
+
+    Column(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(16.dp),
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        Box(
+            modifier = Modifier
+                .size(width = 240.dp, height = 240.dp) // Adjust width and height to match your animation dimensions
+                .clickable { onClick() }
+        ) {
+            LottieAnimation(
+                composition = composition,
+                progress = progress,
+                modifier = Modifier.fillMaxSize()
+            )
+        }
+
+        Text(
+            text = "Scan Any QR and Barcode",
+            modifier = Modifier.padding(top = 8.dp), // Add padding to control the spacing between the animation and text
+            style = MaterialTheme.typography.bodyMedium,
+            color = Color(0xFF008000)
+        )
+    }
+}
+
 
 /**
  * Content of the [Devices] screen. Handles the swipe refresh and listens for
@@ -346,7 +391,6 @@ fun DeviceCard(
  */
 @SuppressLint("MissingPermission")
 @Composable
-@Preview
 fun BluetoothDisabledCard() {
     val context = LocalContext.current
 

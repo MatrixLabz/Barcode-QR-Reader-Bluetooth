@@ -77,7 +77,7 @@
     <string name="bt_service_connected">BT-Service connected!</string>
     <string name="please_wait">Please wait!</string>
     <string name="copied_to_clipboard">Copied to clipboard!</string>
-    <string name="devices">Devices</string>
+    <string name="home">Home</string>
     <string name="keyboard_layout">Keyboard layout</string>
     <string name="keyboard_layout_desc">Set the keyboard layout. Change if you want to type special characters or don\'t use a QWERTY layout.</string>
     <string name="build_version_desc" translatable="false">%s v%s-%s (build %s-%s)</string>

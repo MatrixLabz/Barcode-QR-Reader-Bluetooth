@@ -73,7 +73,7 @@
     <string name="bt_service_connected">BT-Service verbunden!</string>
     <string name="please_wait">Bitte warten!</string>
     <string name="copied_to_clipboard">In Zwischenablage kopiert!</string>
-    <string name="devices">Geräte</string>
+    <string name="home">heim</string>
     <string name="keyboard_layout">Tastatur Layout</string>
     <string name="keyboard_layout_desc">Stellt das verwentete Tastatus Layout ein. Ändern, falls Sie Sonderzeichen eingeben möchten oder kein QWERTY-Layout verwenden.</string>
     <string name="disconnect">Trennen</string>
