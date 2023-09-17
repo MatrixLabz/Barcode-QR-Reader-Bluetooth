@@ -10,6 +10,7 @@ import android.util.Log
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.*
@@ -20,9 +21,12 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.matrix.barcode.bt.removeBond
@@ -55,9 +59,9 @@ fun Devices() = with(viewModel<DevicesViewModel>()) {
                 actions = {
                     IconButton(
                         onClick = { navigation.navigate(Routes.Main) },
-                        modifier = Modifier.tooltip(stringResource(R.string.skip))
+                        modifier = Modifier.tooltip(stringResource(R.string.scan))
                     ) {
-                        Icon(Icons.Default.QrCodeScanner, "Skip")
+                        Icon(Icons.Default.QrCodeScanner, "Scan")
                     }
                     IconButton(
                         onClick = {
@@ -200,7 +204,7 @@ fun DevicesViewModel.DeviceList(
             item {
                 Text(
                     stringResource(R.string.scanned_devices),
-                    color = MaterialTheme.colorScheme.primary,
+                    color = Color(0xFF008000),
                     style = MaterialTheme.typography.titleSmall
                 )
             }
@@ -238,7 +242,7 @@ fun DevicesViewModel.DeviceList(
                 Spacer(Modifier.height(8.dp))
                 Text(
                     stringResource(R.string.paired_devices),
-                    color = MaterialTheme.colorScheme.primary,
+                    color = Color(0xFF008000),
                     style = MaterialTheme.typography.titleSmall
                 )
             }
@@ -342,36 +346,67 @@ fun DeviceCard(
  */
 @SuppressLint("MissingPermission")
 @Composable
+@Preview
 fun BluetoothDisabledCard() {
     val context = LocalContext.current
 
     Card(
-        Modifier
+        modifier = Modifier
             .fillMaxWidth()
             .padding(16.dp),
+        shape = RoundedCornerShape(16.dp)
     ) {
         Column(
-            Modifier
-                .padding(16.dp)
-                .fillMaxWidth(),
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(16.dp),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            Icon(Icons.Default.BluetoothDisabled, null, Modifier.size(64.dp))
+            Icon(
+                imageVector = Icons.Default.BluetoothDisabled,
+                contentDescription = null,
+                modifier = Modifier
+                    .size(64.dp)
+                    .padding(bottom = 16.dp),
+                tint = Color.Gray // Adjust the tint color as needed
+            )
 
-            Text(stringResource(R.string.bluetooth_disabled), style = Typography.headlineMedium)
+            Text(
+                text = stringResource(R.string.bluetooth_disabled),
+                style = Typography.headlineSmall,
+            )
+
             Spacer(Modifier.height(8.dp))
 
-            Text(stringResource(R.string.enable_bluetooth), style = Typography.bodyMedium)
+            Text(
+                text = stringResource(R.string.enable_bluetooth),
+                style = Typography.bodyMedium,
+                color = Color.Gray, // Adjust the text color as needed
+                textAlign = TextAlign.Center, // Center-align the text
+
+            )
+
             Spacer(Modifier.height(16.dp))
 
             Button(
                 onClick = { context.startActivity(Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE)) },
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(48.dp),
+                shape = RoundedCornerShape(24.dp),
+                colors = ButtonDefaults.buttonColors(Color(0xFF008000)),
+                contentPadding = PaddingValues(16.dp)
             ) {
-                Text(stringResource(R.string.enable_bluetooth_btn))
+                Text(
+                    text = stringResource(R.string.enable_bluetooth_btn),
+                    color = Color.White // Adjust the text color as needed
+                )
             }
         }
     }
 }
+
+
 
 /**
  * Dropdown menu for a device.

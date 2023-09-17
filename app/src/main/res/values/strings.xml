@@ -43,7 +43,7 @@
     <string name="swipe_refresh">(Swipe from top to refresh)</string>
     <string name="paired_devices">Paired devices</string>
     <string name="no_paired_devices">(No paired devices found)</string>
-    <string name="skip">Skip</string>
+    <string name="scan">Scan</string>
     <string name="request_again">Request again</string>
     <string name="exit">Exit</string>
     <string name="send_delay">Transmit delay</string>
@@ -114,7 +114,7 @@
     <string name="refresh">Refresh</string>
     <string name="cancel">Cancel</string>
     <string name="bluetooth_disabled">Bluetooth is disabled</string>
-    <string name="enable_bluetooth">Please enable Bluetooth in the system settings or by clicking the button below.</string>
+    <string name="enable_bluetooth">Please enable Bluetooth to connect through devices to send data.</string>
     <string name="enable_bluetooth_btn">Enable Bluetooth</string>
     <string name="no_device">No device connected</string>
     <string name="highlight_type">Highlight type</string>

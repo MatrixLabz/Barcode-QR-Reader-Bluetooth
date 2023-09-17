@@ -106,18 +106,4 @@ device. This could also mean that your device does not support the Bluetooth HID
 this, search for the app "Bluetooth HID Profile Tester" in the PlayStore and see what the result is.
 If the test is not successful, unfortunately your device is not supported.
 
-## License
-
-Copyright (C) 2023 Fabi019
-
-    This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.
-
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
-
 *Google Play and the Google Play logo are trademarks of Google LLC.*
