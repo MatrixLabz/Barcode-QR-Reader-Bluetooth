@@ -38,12 +38,14 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.viewinterop.AndroidView
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.AdSize
+import com.google.android.gms.ads.AdView
 import com.matrix.barcode.ui.*
 import com.matrix.barcode.ui.theme.Neutral95
-import com.matrix.barcode.utils.DeviceInfo
-import com.matrix.barcode.utils.PreferenceStore
-import com.matrix.barcode.utils.rememberPreference
-import com.matrix.barcode.utils.rememberPreferenceDefault
+import com.matrix.barcode.utils.*
+import com.matrix.barcode.utils.Constants.SCANNER_BANNER_AD_ID
 
 /**
  * Scanner screen with camera preview.
@@ -94,6 +96,21 @@ fun Scanner(
             //DeviceInfoCard(currentDevice)
             camera?.let {
                 ZoomStateInfo(it)
+            }
+
+            Column(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(top = 16.dp),
+            ) {
+                Box(
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .weight(1f), // This weight ensures that the AdMob banner takes up the remaining space
+                    contentAlignment = Alignment.BottomCenter
+                ) {
+                    AdmobBanner(Modifier.fillMaxWidth(), SCANNER_BANNER_AD_ID)
+                }
             }
         }
     }

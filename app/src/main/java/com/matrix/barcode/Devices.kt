@@ -7,11 +7,14 @@ import android.bluetooth.BluetoothProfile
 import android.content.Intent
 import android.os.Build
 import android.util.Log
+import android.widget.ScrollView
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.*
@@ -27,17 +30,20 @@ import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.text.style.TextDirection.Companion.Content
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.viewinterop.AndroidView
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.airbnb.lottie.compose.*
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.AdSize
+import com.google.android.gms.ads.AdView
 import com.matrix.barcode.bt.removeBond
 import com.matrix.barcode.ui.*
 import com.matrix.barcode.ui.model.DevicesViewModel
 import com.matrix.barcode.ui.theme.Typography
-import com.matrix.barcode.utils.DeviceInfo
-import com.matrix.barcode.utils.PreferenceStore
-import com.matrix.barcode.utils.SystemBroadcastReceiver
-import com.matrix.barcode.utils.rememberPreferenceDefault
+import com.matrix.barcode.utils.*
+import com.matrix.barcode.utils.Constants.HOME_BANNER_AD_ID
 
 /**
  * Devices screen. Lists all paired devices and also allows to scan for new ones by
@@ -88,7 +94,15 @@ fun Devices() = with(viewModel<DevicesViewModel>()) {
                     // Handle the scan button click action here
                     navigation.navigate(Routes.Main)
                 })
-                DeviceContent()
+                Box(
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .weight(1f), // This weight ensures that the AdMob banner takes up the remaining space
+                    contentAlignment = Alignment.BottomCenter
+                ) {
+                    DeviceContent()
+                    AdmobBanner(Modifier.fillMaxWidth(), HOME_BANNER_AD_ID)
+                }
             }
         }
 
@@ -451,7 +465,6 @@ fun BluetoothDisabledCard() {
 }
 
 
-
 /**
  * Dropdown menu for a device.
  *
@@ -501,4 +514,24 @@ fun DeviceDropdown(
             text = { Text(stringResource(R.string.unpair)) }
         )
     }
+}
+
+@Composable
+fun AdmobBanner(modifier: Modifier = Modifier, bannerId: String) {
+    AndroidView(
+        modifier = Modifier.fillMaxWidth(),
+        factory = { context ->
+            // on below line specifying ad view.
+            AdView(context).apply {
+                // on below line specifying ad size
+                // adSize = AdSize.BANNER
+                // on below line specifying ad unit id
+                // currently added a test ad unit id.
+                setAdSize(AdSize.BANNER)
+                adUnitId = bannerId
+                // calling load ad to load our ad.
+                loadAd(AdRequest.Builder().build())
+            }
+        }
+    )
 }

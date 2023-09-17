@@ -87,6 +87,8 @@ dependencies {
 
     standardImplementation "com.google.android.gms:play-services-mlkit-barcode-scanning:18.3.0"
     standardImplementation "com.google.android.gms:play-services-base:18.2.0"
+    implementation 'com.google.android.gms:play-services-ads:22.4.0'
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-guava:1.6.2"
 
     implementation "com.google.accompanist:accompanist-permissions:$accomp_version"
     implementation "com.airbnb.android:lottie-compose:$lottie_version"
